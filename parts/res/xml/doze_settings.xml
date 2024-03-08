@@ -24,7 +24,7 @@
         android:key="doze_enable"
         android:title="@string/ambient_enable" />
 
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:disableDependentsState="true"
         android:key="always_on_display"
         android:persistent="false"
@@ -35,13 +35,13 @@
         android:key="pickup_sensor"
         android:title="@string/pickup_sensor_title">
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:defaultValue="false"
             android:key="gesture_pick_up"
             android:summary="@string/pick_up_gesture_summary"
             android:title="@string/pick_up_gesture_title" />
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:defaultValue="false"
             android:disableDependentsState="true"
             android:key="gesture_raise_to_wake"

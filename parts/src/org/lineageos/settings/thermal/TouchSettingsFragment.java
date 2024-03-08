@@ -20,7 +20,7 @@ import android.os.Bundle;
 
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.widget.SeekBarPreference;
@@ -32,7 +32,7 @@ public class TouchSettingsFragment extends PreferenceFragment
     private SeekBarPreference mTouchSensitivity;
     private SeekBarPreference mTouchResponse;
     private SeekBarPreference mTouchResistant;
-    private SwitchPreference mGameMode;
+    private SwitchPreferenceCompat mGameMode;
 
     private String packageName = "";
 
@@ -49,7 +49,7 @@ public class TouchSettingsFragment extends PreferenceFragment
         }
 
         getActivity().setTitle(appName);
-        mGameMode = (SwitchPreference) findPreference(Constants.PREF_TOUCH_GAME_MODE);
+        mGameMode = (SwitchPreferenceCompat) findPreference(Constants.PREF_TOUCH_GAME_MODE);
         mTouchResistant = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_RESISTANT);
         mTouchResponse = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_RESPONSE);
         mTouchSensitivity = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_SENSITIVITY);

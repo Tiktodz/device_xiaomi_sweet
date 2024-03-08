@@ -19,7 +19,7 @@
         android:key="touch_settings"
         android:title="@string/touch_control_title" >
 
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:defaultValue="false"
             android:key="touch_game_mode"
             android:summary="@string/touch_game_mode_summary"
