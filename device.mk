@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
+    libprocessgroup.vendor \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -72,7 +73,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor:64 \
-    libpiex_shim
+    liblz4.vendor:64 \
+    libpiex_shim \
+    libpng.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -213,12 +216,13 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libmm-omxcore \
-    libstagefrighthw \
-    libstagefright_foundation-v33 \
     libavservices_minijail_vendor \
     libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
+    libmm-omxcore \
+    libsfplugin_ccodec_utils.vendor \
+    libstagefright_foundation-v33 \
+    libstagefright_softomx_plugin.vendor:32 \
+    libstagefrighthw
 
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
@@ -339,7 +343,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libjson \
-    librmnetctl
+    librmnetctl \
+    libsqlite.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
