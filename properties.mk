@@ -236,6 +236,12 @@ vendor.gralloc.disable_ubwc=0
 PRODUCT_SYSTEM_PROPERTIES += \
 debug.hwui.skia_atrace_enabled=false
 
+# Hardware Description
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.device.chipset=Qualcomm Snapdragon 732G \
+ro.device.display_resolution=6.67inc AMOLED 1080x2400 \
+ro.device.colorbody_phone=Onyx Gray
+
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.sf.force_hwc_brightness=1
 
