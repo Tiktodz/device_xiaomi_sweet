@@ -14,7 +14,7 @@ $(call inherit-product, device/xiaomi/sweet/device.mk)
 # Inherit some common ArrowOS stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
 
-DEVICE_MAINTAINER := Kazmakiryuu
+DEVICE_MAINTAINER := Ryann
 DEVICE_MAINTAINER_LINK := https://t.me/Kazmakiryuu
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
