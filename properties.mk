@@ -206,28 +206,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.qti.va_aosp.support=1
 
 # Fling
-ro.min.fling_velocity=160
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.min.fling_velocity=160 \
 ro.max.fling_velocity=20000
-ro.vendor.qti.cgroup_follow.enable=true 
-persist.vendor.qti.inputopts.enable=true 
-persist.vendor.qti.inputopts.movetouchslop=0.6 
-ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-debug.sf.enable_gl_backpressure=1 \
+debug.sf.disable_backpressure=1 \
+debug.sf.enable_gl_backpressure=0 \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.hw=1 \
-debug.sf.latch_unsignaled=0 \
+debug.sf.latch_unsignaled=1 \
 debug.sf.predict_hwc_composition_strategy=0 \
 debug.sf.treat_170m_as_sRGB=1 \
-persist.sys.sf.color_saturation=1.0 \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno \
 ro.opengles.version=196610 \
-ro.vendor.extension_library=libqti-perfd-client.so \
-ro.vendor.perf.scroll_opt=true \
 vendor.display.comp_mask=0 \
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0 \
 vendor.display.disable_decimation=1 \
@@ -303,6 +298,7 @@ persist.vendor.data.iwlan.enable=true
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf.scroll_opt=true
 
 # Radio/RIL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -357,7 +353,6 @@ ro.surface_flinger.has_HDR_display=true \
 ro.surface_flinger.has_wide_color_display=true \
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
 ro.surface_flinger.max_virtual_display_dimension=4096 \
-ro.surface_flinger.protected_contents=true \
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # System
